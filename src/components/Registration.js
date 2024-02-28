@@ -17,7 +17,7 @@ function Registration() {
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
         setFormData({
-            ...formData,
+            ...formData, //it is used for shallow copy of formdata(spread operator) shallow copy creates a new object and inserts copies of the original object's values into the new object,
             [name]: type === 'checkbox' ? checked : value
         });
     };
